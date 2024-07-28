@@ -1,9 +1,9 @@
 # Sports-Merchandise-Store
-## Creative Collaboration Project that combines data from Formula 1 and Football items for a MErchandise Store.
+## Creative Collaboration Project that combines data from Formula 1 and Football items for a Merchandise Store.
 ------------------------------
 ## Added Data
-- Football Teams
-- Football Players
+- Football Teams table
+- Football Players table
 
 ## To be added(MVP):
 - Formula drivers
