@@ -11,6 +11,10 @@ using System.Web.Http.Description;
 using Passion_Project.Models;
 using Sports_Merchandise_Store.Models;
 
+/// <info>
+/// API CONTROLLER FOR THE FOOTBALL TEAMS TABLE
+/// </info>
+
 namespace Sports_Merchandise_Store.Controllers
 {
     public class TeamDataController : ApiController
