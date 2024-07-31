@@ -1,0 +1,21 @@
+﻿@model Sports_Merchandise_Store.Models.ViewModels.DetailsTeam
+
+@{ 
+    ViewBag.Title = "View";
+}
+
+<h2>@Model.SelectedTeam.TeamName</h2>
+<nav>
+    <ul>
+        <li><a href="/Team/List">Go Back to Club List</a></li>
+        <li><a href="/Team/Edit/@Model.SelectedTeam.TeamId">Update</a></li>
+        <li><a style="color:#BA1F33" href="/Team/Delete/@Model.SelectedTeam.TeamId">Delete</a></li>
+    </ul>
+</nav>
+<div>
+    <div>
+        <p>League: @Model.SelectedTeam.League</p>
+        <p>Country: @Model.SelectedTeam.TeamCountry</p>
+        <p>Budget: @Model.SelectedTeam.TeamBudget.ToString("N2")€</p>
+    </div>
+</div>

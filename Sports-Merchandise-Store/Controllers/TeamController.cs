@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Diagnostics;
 using System.Security.Policy;
 using Sports_Merchandise_Store.Models;
-//using Sports_Merchandise_Store.ViewModels;
+using Sports_Merchandise_Store.Models.ViewModels;
 using Sports_Merchandise_Store.Migrations;
 
 namespace Sports_Merchandise_Store.Controllers
@@ -25,8 +25,8 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/List
-        //[Authorize]
-        //[Route("Team/List")]
+        //[Authorize] Commented out until admin and user authorization is created
+        
         public ActionResult List()
         {
             string url = "TeamData/ListTeams";
@@ -38,23 +38,23 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // Get a specified team from the API and pass it to the view.
-        [Authorize]
-        /* public ActionResult Details(int id)
+        //[Authorize]
+         public ActionResult Details(int id)
         {
             DetailsTeam ViewModel = new DetailsTeam();
-            string url = "TeamData/FindTeam/" + id;
+            string url = "TeamData/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
             // Debugging
-            Debug.WriteLine("The response code is:" + response.StatusCode);
+            //Debug.WriteLine("The response code is:" + response.StatusCode);
 
             TeamDTO SelectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
             // Debugging
-            Debug.WriteLine("Team Received:" + SelectedTeam.TeamName);
+           //Debug.WriteLine("Team Received:" + SelectedTeam.TeamName);
 
             ViewModel.SelectedTeam = SelectedTeam;
 
             return View(ViewModel);  
-        } */
+        }
 
         public ActionResult Error()
         {
@@ -62,7 +62,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/New
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult New()
         {
             return View();
@@ -70,7 +70,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Team/Create
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult Create(Team team)
         {
             string url = "TeamData/AddTeam";
@@ -82,6 +82,8 @@ namespace Sports_Merchandise_Store.Controllers
             content.Headers.ContentType.MediaType = "application/json";
 
             HttpResponseMessage response = client.PostAsync(url, content).Result;
+            Debug.WriteLine(response.StatusCode);
+
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("List");
