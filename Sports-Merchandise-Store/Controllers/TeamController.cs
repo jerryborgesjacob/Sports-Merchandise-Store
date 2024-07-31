@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Diagnostics;
 using System.Security.Policy;
 using Sports_Merchandise_Store.Models;
+//using Sports_Merchandise_Store.ViewModels;
 using Sports_Merchandise_Store.Migrations;
 
 namespace Sports_Merchandise_Store.Controllers
@@ -20,17 +21,18 @@ namespace Sports_Merchandise_Store.Controllers
         static TeamController()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:44347/api/");
+            client.BaseAddress = new Uri("https://localhost:44347/api/");
         }
 
-        // Get list of teams from the API and pass them to the view
-        [Authorize]
-        [Route("Team/List")]
+        // GET: Team/List
+        //[Authorize]
+        //[Route("Team/List")]
         public ActionResult List()
         {
             string url = "TeamData/ListTeams";
             HttpResponseMessage response = client.GetAsync(url).Result;
-            
+
+            Debug.WriteLine(response.StatusCode);
             IEnumerable<TeamDTO> teams = response.Content.ReadAsAsync<IEnumerable<TeamDTO>>().Result;
             return View(teams);
         }

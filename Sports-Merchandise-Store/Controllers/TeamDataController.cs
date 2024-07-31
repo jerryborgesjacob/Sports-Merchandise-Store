@@ -35,9 +35,10 @@ namespace Sports_Merchandise_Store.Controllers
         [HttpGet]
         [Route("api/TeamData/ListTeams")]
         // Set up GET request and Route
-        public IEnumerable<TeamDTO> ListTeams()
+        public IHttpActionResult ListTeams()
         {
             List<Team> Teams = db.Teams.ToList();
+
             List<TeamDTO> TeamDTOs = new List<TeamDTO>();
             Teams.ForEach(t => TeamDTOs.Add(new TeamDTO()
             {
@@ -47,7 +48,7 @@ namespace Sports_Merchandise_Store.Controllers
                 TeamCountry = t.TeamCountry,
                 TeamBudget = t.TeamBudget
             }));
-            return TeamDTOs;
+            return Ok(TeamDTOs);
         }
 
         // Find Team with specific id
