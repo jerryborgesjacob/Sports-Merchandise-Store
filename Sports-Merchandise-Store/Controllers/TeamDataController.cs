@@ -8,7 +8,6 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Passion_Project.Models;
 using Sports_Merchandise_Store.Models;
 
 /// <info>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.TeamDTO>
+@{ 
+    ViewBag.title = "List";
+}
+
+<h2>Football Clubs List</h2>
+<a href="/Team/New">Add a Club</a>
+@foreach(var Team in Model)
+            {
+                <h3><a href="/Team/Details/@Team.TeamId">@Team.TeamName</a></h3>
+                <div>
+                    <p>League: @Team.League</p>
+                    <p>Country: @Team.TeamCountry</p>
+                    <p>Budget: @Team.TeamBudget</p>
+                </div>
+            }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Passion_Project.Models
+namespace Sports_Merchandise_Store.Models
 {
     //Model for holding the player table contents
     public class Player

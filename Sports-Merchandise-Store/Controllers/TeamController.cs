@@ -9,7 +9,6 @@ using System.Diagnostics;
 using System.Security.Policy;
 using Sports_Merchandise_Store.Models;
 using Sports_Merchandise_Store.Migrations;
-using Passion_Project.Models;
 
 namespace Sports_Merchandise_Store.Controllers
 {
@@ -21,11 +20,12 @@ namespace Sports_Merchandise_Store.Controllers
         static TeamController()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost44347/api/");
+            client.BaseAddress = new Uri("http://localhost:44347/api/");
         }
 
         // Get list of teams from the API and pass them to the view
         [Authorize]
+        [Route("Team/List")]
         public ActionResult List()
         {
             string url = "TeamData/ListTeams";
@@ -37,7 +37,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // Get a specified team from the API and pass it to the view.
         [Authorize]
-        public ActionResult Details(int id)
+        /* public ActionResult Details(int id)
         {
             DetailsTeam ViewModel = new DetailsTeam();
             string url = "TeamData/FindTeam/" + id;
@@ -52,7 +52,7 @@ namespace Sports_Merchandise_Store.Controllers
             ViewModel.SelectedTeam = SelectedTeam;
 
             return View(ViewModel);  
-        }
+        } */
 
         public ActionResult Error()
         {
