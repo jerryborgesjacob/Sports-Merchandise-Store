@@ -51,7 +51,7 @@ namespace Sports_Merchandise_Store.Controllers
             return TeamDTOs;
         }
 
-        // GetTeam with specific id
+        // Find Team with specific id
 
         /// <summary>
         /// Returns the details of the team with the provided id.
@@ -65,7 +65,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         [HttpGet]
         [ResponseType(typeof(Team))]
-        public IHttpActionResult GetTeam(int id)
+        public IHttpActionResult FindTeam(int id)
         {
             Team team = db.Teams.Find(id);
             if (team == null)
@@ -167,12 +167,13 @@ namespace Sports_Merchandise_Store.Controllers
         /// HEADER: 404 (NOT FOUND)
         /// </returns>
         /// <example>
-        /// POST: api/TeamData/DeleteTeam/5
+        /// DELETE: api/TeamData/DeleteTeam/5
         /// FORM DATA: (empty)
         /// </example>
         [ResponseType(typeof(Team))]
-        [HttpPost]
-        [Authorize(Roles = "Admin")] // Allow only admins to delete a team.
+        [HttpDelete]
+        [Route("api/TeamData/DeleteTeam/{id}")]
+        //[Authorize(Roles = "Admin")] // Allow only admins to delete a team.
         public IHttpActionResult DeleteTeam(int id)
         {   
             // Finds the team with the provided id in the database
@@ -187,6 +188,7 @@ namespace Sports_Merchandise_Store.Controllers
 
             return Ok();
         }
+
         // Check if a team with a sepcified id exists in the database.
         private bool TeamExists(int id)
         {
