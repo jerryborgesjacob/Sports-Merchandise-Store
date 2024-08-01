@@ -95,7 +95,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/Edit/2
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             string url = "TeamData/FindTeam/" + id;
@@ -107,7 +107,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Team/Update/5
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult Update(int id, Team team)
         {
             string url = "TeamData/UpdateTeam/" + id;
@@ -129,17 +129,18 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         //GET: Team/Delete/2
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirm(int id)
         {
             string url = "TeamData/FindTeam/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
+
             TeamDTO selectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
             return View(selectedTeam);
         }
 
         // POST: Team/Delete/2
-        [HttpPost]
+        //[HttpPost]
         [Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {

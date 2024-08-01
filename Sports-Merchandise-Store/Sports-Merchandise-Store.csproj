@@ -277,6 +277,7 @@
     <Content Include="Views\Team\List.cshtml" />
     <Content Include="Views\Team\Details.cshtml" />
     <Content Include="Views\Team\New.cshtml" />
+    <Content Include="Views\Team\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
