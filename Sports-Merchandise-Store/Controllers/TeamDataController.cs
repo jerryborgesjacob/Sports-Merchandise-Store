@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -143,6 +144,8 @@ namespace Sports_Merchandise_Store.Controllers
         /// </example>
         [ResponseType(typeof(Team))]
         [HttpPost]
+        [Route("api/TeamData/AddTeam")]
+
         public IHttpActionResult AddTeam(Team team)
         {
             if (!ModelState.IsValid)
@@ -153,7 +156,11 @@ namespace Sports_Merchandise_Store.Controllers
             db.Teams.Add(team);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = team.TeamId }, team);
+            //Debugging
+            //Debug.WriteLine(ModelState);
+            //Debug.WriteLine(team);
+
+            return CreatedAtRoute("DefaultApi", new { controller = "TeamController", id = team.TeamId }, team);
         }
 
         //DeleteTeam

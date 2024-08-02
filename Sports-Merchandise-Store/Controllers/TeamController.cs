@@ -76,13 +76,18 @@ namespace Sports_Merchandise_Store.Controllers
             string url = "TeamData/AddTeam";
             string jsonpayload = jss.Serialize(team);
             // Debugging
-            Debug.WriteLine(jsonpayload);
+            //Debug.WriteLine(jsonpayload);
 
             HttpContent content = new StringContent(jsonpayload);
             content.Headers.ContentType.MediaType = "application/json";
 
             HttpResponseMessage response = client.PostAsync(url, content).Result;
             Debug.WriteLine(response.StatusCode);
+
+            // Debugging
+            //string responseContent = response.Content.ReadAsStringAsync().Result;
+            //Debug.WriteLine(responseContent);
+
 
             if (response.IsSuccessStatusCode)
             {
@@ -130,6 +135,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         //GET: Team/Delete/2
         //[Authorize(Roles = "Admin")]
+       
         public ActionResult DeleteConfirm(int id)
         {
             string url = "TeamData/FindTeam/" + id;
