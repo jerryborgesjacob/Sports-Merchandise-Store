@@ -184,6 +184,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlayerDataController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TeamDataController.cs" />
     <Compile Include="Global.asax.cs">
@@ -280,10 +281,10 @@
     <Content Include="Views\Team\DeleteConfirm.cshtml" />
     <Content Include="Views\Team\Error.cshtml" />
     <Content Include="Views\Team\Edit.cshtml" />
+    <Content Include="Views\Player\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Player\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
