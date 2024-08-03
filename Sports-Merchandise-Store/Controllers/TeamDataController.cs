@@ -94,6 +94,7 @@ namespace Sports_Merchandise_Store.Controllers
         /// </example>
         [HttpPost]
         [ResponseType(typeof(void))]
+        [Route("api/TeamData/UpdateTeam/{id}")]
         public IHttpActionResult UpdateTeam(int id, Team team)
         {
             // Model State invalid

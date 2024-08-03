@@ -103,7 +103,7 @@ namespace Sports_Merchandise_Store.Controllers
         //[Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
-            string url = "TeamData/FindTeam/" + id;
+            string url = "TeamData/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
             TeamDTO selectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
 
@@ -120,10 +120,11 @@ namespace Sports_Merchandise_Store.Controllers
             HttpContent content = new StringContent(jsonpayload);
             content.Headers.ContentType.MediaType = "application/json";
             HttpResponseMessage response = client.PostAsync(url, content).Result;
-
+            
             // Debugging
-            Debug.WriteLine(content);
-            if(response.IsSuccessStatusCode)
+            //Debug.WriteLine("Response is: " + response);
+            
+            if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("List");
             }

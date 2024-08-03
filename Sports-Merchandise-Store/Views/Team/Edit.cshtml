@@ -1,0 +1,35 @@
+﻿@model Sports_Merchandise_Store.Models.TeamDTO
+
+@{ 
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update @Model.TeamName</h2>
+<nav>
+    <ul>
+        <li><a href="/Team/List">Go Back to Clubs</a></li>
+        <li><a style="color: red"href="/Team/DeleteConfirm/@Model.TeamId">Delete</a></li>
+    </ul>
+</nav>
+<form action="/Team/Update/@Model.TeamId" method="post">
+    <input type="hidden" name="TeamId" value="@Model.TeamId" />
+    <div>
+        <label>Club Name</label>
+        <input type="text" name="TeamName" value="@Model.TeamName" />
+    </div>
+    <div>
+        <label>League</label>
+        <input type="text" name="League" value="@Model.League" />
+    </div>
+    <div>
+        <label>Country</label>
+        <input type="text" name="TeamCountry" value="@Model.TeamCountry" />
+    </div>
+    <div>
+        <label>Estimated Budget</label>
+        <input type="number" name="TeamBudget" value="@Model.TeamBudget" />
+    </div>
+    <div>
+        <button type="submit">Update Club</button>
+    </div>
+</form>

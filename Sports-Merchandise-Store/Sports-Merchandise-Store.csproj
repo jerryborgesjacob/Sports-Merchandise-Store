@@ -278,6 +278,8 @@
     <Content Include="Views\Team\Details.cshtml" />
     <Content Include="Views\Team\New.cshtml" />
     <Content Include="Views\Team\DeleteConfirm.cshtml" />
+    <Content Include="Views\Team\Error.cshtml" />
+    <Content Include="Views\Team\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
