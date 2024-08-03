@@ -10,13 +10,16 @@ namespace Sports_Merchandise_Store.Models
     //Model for holding the team table contents
     public class Team
     {
-        //A team can hold multiple players
+        
         [Key]
         public int TeamId { get; set; }
         public string TeamName { get; set; }
         public string League { get; set; }
         public string TeamCountry { get; set; }
         public decimal TeamBudget { get; set; }
+
+        //A team can hold multiple players
+        public ICollection<Player> Players { get; set; }
     }
 
     //DTO section

@@ -48,5 +48,38 @@ namespace Sports_Merchandise_Store.Controllers
             }));
             return Ok(PlayerDTOs);
         }
+
+        //Find a player by id
+        /// <summary>
+        /// Returns the details of the player with the provided id.
+        /// </summary>
+        /// <returns>
+        /// A list of the specified id player.
+        /// </returns>
+        /// <example>
+        /// GET: api/PlayerData/1 --> (PLayerId, PlayerName, PlayerPosition, ShirtNumber, PlayerTeamId = TeamName) --> (1, Cole Palmer, RW, 20, Chelsea) 
+        /// </example>
+        [HttpGet]
+        [ResponseType(typeof(PlayerDTO))]
+        public IHttpActionResult FindPlayer(int id)
+        {   
+            
+            Player Player = db.Players.Find(id);
+            PlayerDTO PlayerDTO = new PlayerDTO()
+            {
+                PlayerId = Player.PlayerId,
+                PlayerName = Player.PlayerName,
+                PlayerPosition = Player.PlayerPosition,
+                ShirtNumber = Player.ShirtNumber,
+                TeamName = Player.Team.TeamName
+            };
+            if(Player == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(PlayerDTO);
+        }
+
     }
 }
