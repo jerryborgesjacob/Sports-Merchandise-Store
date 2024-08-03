@@ -138,16 +138,17 @@ namespace Sports_Merchandise_Store.Controllers
        
         public ActionResult DeleteConfirm(int id)
         {
-            string url = "TeamData/FindTeam/" + id;
+            string url = "TeamData/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
+            Debug.WriteLine("Response is: " + response);
 
-            TeamDTO selectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
-            return View(selectedTeam);
+            TeamDTO SelectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
+            return View(SelectedTeam);
         }
 
         // POST: Team/Delete/2
         //[HttpPost]
-        [Authorize(Users = "Admin")]
+        //[Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "TeamData/DeleteTeam/" + id;

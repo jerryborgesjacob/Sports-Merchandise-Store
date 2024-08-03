@@ -178,7 +178,7 @@ namespace Sports_Merchandise_Store.Controllers
         /// FORM DATA: (empty)
         /// </example>
         [ResponseType(typeof(Team))]
-        [HttpDelete]
+        [HttpPost]
         [Route("api/TeamData/DeleteTeam/{id}")]
         //[Authorize(Roles = "Admin")] // Allow only admins to delete a team.
         public IHttpActionResult DeleteTeam(int id)
