@@ -4,11 +4,12 @@
 ## Added Data
 - Football Teams table
 - Football Players table
+- Football Teams CRUD
+- Players READ functionality
 
 ## To be added(MVP):
 - Formula drivers
 - Formula Teams
-- CRUD for football
 - CRUD for Formula
 
 ## To be added (Final)
