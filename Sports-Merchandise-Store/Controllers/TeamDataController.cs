@@ -197,7 +197,7 @@ namespace Sports_Merchandise_Store.Controllers
             return Ok();
         }
 
-        // Check if a team with a sepcified id exists in the database.
+        // Check if a team with a specified id exists in the database.
         private bool TeamExists(int id)
         {
             return db.Teams.Count(t => t.TeamId == id) > 0;

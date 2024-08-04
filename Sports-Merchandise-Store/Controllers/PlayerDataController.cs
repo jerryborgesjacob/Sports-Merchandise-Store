@@ -81,5 +81,127 @@ namespace Sports_Merchandise_Store.Controllers
             return Ok(PlayerDTO);
         }
 
+        // Update Player
+
+        /// <summary>
+        /// Updates the details of a player.
+        /// </summary>
+        /// <returns>
+        /// HEADER = 204 (Success, No content response)
+        /// or
+        /// HEADER = 400 (BAD REQUEST)
+        /// or
+        /// HEADER = 404 (NOT FOUND)
+        /// </returns>
+        /// <example>
+        /// POST: api/PlayerData/UpdatePlayer/1
+        /// FORM DATA: JSON Team object
+        /// </example>
+        [HttpPost]
+        [ResponseType(typeof(void))]
+        [Route("api/PlayerData/UpdatePlayer/{id}")]
+        public IHttpActionResult UpdatePlayer(int id, Player player)
+        {
+            //Model State validation
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            //player id validation
+            if(id != player.PlayerId)
+            {
+                return BadRequest();
+            }
+            // Mark the 'player' entity as modified, so changes will be tracked and saved to the database.
+            db.Entry(player).State = EntityState.Modified;
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PlayerExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;   
+                }
+            }
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        //Add Player
+        /// <summary>
+        /// Adds a new player with its details in the football players table.
+        /// </summary>
+        /// <returns>
+        /// HEADER = 201 (CREATED)
+        /// CONTENT: Player ID, Player Data
+        /// or
+        /// HEADER = 400 (BAD REQUEST)
+        /// </returns>
+        /// <example>
+        /// POST: api/PlayerData/AddPlayer
+        /// FORM DATA: Team JSON object
+        /// </example>
+        [HttpPost]
+        [ResponseType(typeof(Player))]
+        [Route("api/PlayerData/AddPlayer")]
+        public IHttpActionResult AddPlayer(Player player)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            // Adds player to the database and saves it
+            db.Players.Add(player);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { controller = "PlayerController", id = player.PlayerId }, player);
+        }
+
+        //Delete Player
+        /// <summary>
+        /// Deletes a player from the database by its id.
+        /// </summary>
+        /// <returns>
+        /// HEADER: 200 (OK)
+        /// or
+        /// HEADER: 404 (NOT FOUND)
+        /// </returns>
+        /// <example>
+        /// DELETE: api/PlayerData/DeletePlayer/5
+        /// FORM DATA: (empty)
+        /// </example>
+        [ResponseType(typeof(Player))]
+        [HttpPost]
+        [Route("api/PlayerData/DeletePlayer/{id}")]
+        //[Authorize(Roles = "Admin")] // Allow only admins to delete a player.
+        public IHttpActionResult DeletePlayer(int id)
+        {
+            // Finds the player with the provided id in the database
+            Player player = db.Players.Find(id);
+            if (player == null)
+            {
+                return NotFound();
+            }
+            // Removes the player and saves the changes.
+            db.Players.Remove(player);
+            db.SaveChanges();
+
+            return Ok();
+        }
+
+
+
+        // Check if a player with a specified id exists in the database.
+        private bool PlayerExists(int id)
+        {
+            return db.Players.Count(p => p.PlayerId == id) > 0;
+        }
+
     }
 }
