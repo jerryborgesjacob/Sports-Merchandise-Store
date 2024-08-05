@@ -32,6 +32,7 @@ namespace Sports_Merchandise_Store.Models
         public string PlayerName { get; set; }
         public string PlayerPosition { get; set; }
         public int ShirtNumber { get; set; }
+        public int PlayerTeamId { get; set; }
         public string TeamName { get; set; }
     }
 }

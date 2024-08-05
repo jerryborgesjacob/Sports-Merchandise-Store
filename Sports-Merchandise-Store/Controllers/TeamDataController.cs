@@ -66,6 +66,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         [HttpGet]
         [ResponseType(typeof(Team))]
+        [Route("api/TeamData/FindTeam/{id}")]
         public IHttpActionResult FindTeam(int id)
         {
             Team team = db.Teams.Find(id);

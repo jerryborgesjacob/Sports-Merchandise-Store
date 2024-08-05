@@ -5,10 +5,8 @@ using System.Web;
 
 namespace Sports_Merchandise_Store.Models.ViewModels
 {
-    public class DetailsTeam
+    public class DetailsPlayer
     {
-        public TeamDTO SelectedTeam { get; set; }
-        
-
+        public PlayerDTO SelectedPlayer { get; set; }
     }
 }

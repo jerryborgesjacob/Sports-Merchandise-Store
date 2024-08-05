@@ -1,0 +1,21 @@
+﻿@model Sports_Merchandise_Store.Models.ViewModels.DetailsPlayer
+
+@{ 
+    ViewBag.title = "Details";
+}
+
+<h2>@Model.SelectedPlayer.PlayerName</h2>
+<nav>
+    <ul>
+        <li><a href="/Player/List">Go Back to Player List</a></li>
+        <li><a href="/Player/Edit/@Model.SelectedPlayer.PlayerId">Update</a></li>
+        <li><a style="color:#BA1F33" href="/Player/DeleteConfirm/@Model.SelectedPlayer.PlayerId">Delete</a></li>
+    </ul>
+</nav>
+<div>
+    <div>
+        <p>Position: @Model.SelectedPlayer.PlayerPosition</p>
+        <p>Shirt Number: @Model.SelectedPlayer.ShirtNumber</p>
+        <p>Current Club: @Model.SelectedPlayer.TeamName</p>
+    </div>
+</div>

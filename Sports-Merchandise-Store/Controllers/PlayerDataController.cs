@@ -61,6 +61,7 @@ namespace Sports_Merchandise_Store.Controllers
         /// </example>
         [HttpGet]
         [ResponseType(typeof(PlayerDTO))]
+        [Route("api/PlayerData/FindPlayer/{id}")]
         public IHttpActionResult FindPlayer(int id)
         {   
             

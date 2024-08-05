@@ -1,1 +1,13 @@
-﻿
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.PlayerDTO>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Football Players List</h2>
+<a href="/Player/New">Add a Player</a>
+@foreach (var Player in Model)
+{
+    <h3><a href="/Player/Details/@Player.PlayerId">@Player.PlayerName</a></h3>
+    <p>@Player.TeamName</p>
+}

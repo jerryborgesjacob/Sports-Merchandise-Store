@@ -13,68 +13,63 @@ using Sports_Merchandise_Store.Migrations;
 
 namespace Sports_Merchandise_Store.Controllers
 {
-    public class TeamController : Controller
+    public class PlayerController : Controller
     {
         private static readonly HttpClient client;
         private JavaScriptSerializer jss = new JavaScriptSerializer();
 
-        static TeamController()
+        static PlayerController()
         {
             client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:44347/api/");
         }
-
-        // GET: Team/List
-        //[Authorize] Commented out until admin and user authorization is created
-        
+        // GET: Player/List
         public ActionResult List()
         {
-            string url = "TeamData/ListTeams";
+            string url = "PlayerData/ListPlayers";
             HttpResponseMessage response = client.GetAsync(url).Result;
 
-            //Debug.WriteLine(response.StatusCode);
-            IEnumerable<TeamDTO> teams = response.Content.ReadAsAsync<IEnumerable<TeamDTO>>().Result;
-            return View(teams);
+            IEnumerable<PlayerDTO> players = response.Content.ReadAsAsync<IEnumerable<PlayerDTO>>().Result;
+            return View(players);
         }
 
-        // Get a specified team from the API and pass it to the view.
+        // Get a specified player from the API and pass it to the view.
         //[Authorize]
-         public ActionResult Details(int id)
+        public ActionResult Details(int id)
         {
-            DetailsTeam ViewModel = new DetailsTeam();
-            string url = "TeamData/FindTeam/" + id;
+            DetailsPlayer ViewModel = new DetailsPlayer();
+            string url = "PlayerData/FindPlayer/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
+
+            PlayerDTO SelectedPlayer = response.Content.ReadAsAsync<PlayerDTO>().Result;
             // Debugging
-            //Debug.WriteLine("The response code is:" + response.StatusCode);
+            //Debug.WriteLine("Player Received:" + SelectedPlayer.TeamPlayer);
 
-            TeamDTO SelectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
-            // Debugging
-           //Debug.WriteLine("Team Received:" + SelectedTeam.TeamName);
+            ViewModel.SelectedPlayer = SelectedPlayer;
 
-            ViewModel.SelectedTeam = SelectedTeam;
-
-            return View(ViewModel);  
+            return View(ViewModel);
         }
 
-        public ActionResult Error()
-        {
-            return View();
-        }
-
-        // GET: Team/New
+        // GET: Player/New
         //[Authorize(Roles = "Admin")]
         public ActionResult New()
         {
+            // Fetch the team list to make it available for selection
+            string url = "TeamData/ListTeams";
+            HttpResponseMessage response = client.GetAsync(url).Result;
+            IEnumerable<TeamDTO> teams = response.Content.ReadAsAsync<IEnumerable<TeamDTO>>().Result;
+            // Make teams available for the dropdown menu in the view
+            ViewBag.Teams = new SelectList(teams, "TeamId", "TeamName");
             return View();
         }
 
-        // POST: Team/Create
+        // POST: Player/Create
         [HttpPost]
         //[Authorize(Roles = "Admin")]
-        public ActionResult Create(Team team)
+        public ActionResult Create(Player player)
         {
-            string url = "TeamData/AddTeam";
-            string jsonpayload = jss.Serialize(team);
+            string url = "PlayerData/AddPlayer";
+            string jsonpayload = jss.Serialize(player);
             // Debugging
             //Debug.WriteLine(jsonpayload);
 
@@ -99,31 +94,39 @@ namespace Sports_Merchandise_Store.Controllers
             }
         }
 
-        // GET: Team/Edit/2
+        // GET: Player/Edit/2
         //[Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
-            string url = "TeamData/FindTeam/" + id;
+            string url = "PlayerData/FindPlayer/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
-            TeamDTO selectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
+            PlayerDTO SelectedPlayer = response.Content.ReadAsAsync<PlayerDTO>().Result;
 
-            return View(selectedTeam);
+            // Fetch the team list to make it available for selection
+            string TeamUrl = "TeamData/ListTeams";
+            HttpResponseMessage TeamResponse = client.GetAsync(TeamUrl).Result;
+            IEnumerable<TeamDTO> teams = TeamResponse.Content.ReadAsAsync<IEnumerable<TeamDTO>>().Result;
+
+            // Make teams available for the dropdown menu in the view
+            ViewBag.Teams = new SelectList(teams, "TeamId", "TeamName", SelectedPlayer.TeamName);
+
+            return View(SelectedPlayer);
         }
 
-        // POST: Team/Update/5
+        // POST: Player/Update/2
         [HttpPost]
         //[Authorize(Roles = "Admin")]
-        public ActionResult Update(int id, Team team)
+        public ActionResult Update(int id, Player player)
         {
-            string url = "TeamData/UpdateTeam/" + id;
-            string jsonpayload = jss.Serialize(team);
+            string url = "PlayerData/UpdatePlayer/" + id;
+            string jsonpayload = jss.Serialize(player);
             HttpContent content = new StringContent(jsonpayload);
             content.Headers.ContentType.MediaType = "application/json";
             HttpResponseMessage response = client.PostAsync(url, content).Result;
-            
+
             // Debugging
             //Debug.WriteLine("Response is: " + response);
-            
+
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("List");
@@ -134,30 +137,30 @@ namespace Sports_Merchandise_Store.Controllers
             }
         }
 
-        //GET: Team/Delete/2
+        //GET: Player/Delete/2
         //[Authorize(Roles = "Admin")]
-       
+
         public ActionResult DeleteConfirm(int id)
         {
-            string url = "TeamData/FindTeam/" + id;
+            string url = "PlayerData/FindPlayer/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
-            Debug.WriteLine("Response is: " + response);
+            //Debug.WriteLine("Response is: " + response);
 
-            TeamDTO SelectedTeam = response.Content.ReadAsAsync<TeamDTO>().Result;
-            return View(SelectedTeam);
+            PlayerDTO SelectedPlayer = response.Content.ReadAsAsync<PlayerDTO>().Result;
+            return View(SelectedPlayer);
         }
 
-        // POST: Team/Delete/2
+        // POST: Player/Delete/2
         //[HttpPost]
         //[Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {
-            string url = "TeamData/DeleteTeam/" + id;
+            string url = "PlayerData/DeletePlayer/" + id;
             HttpContent content = new StringContent("");
             content.Headers.ContentType.MediaType = "application/json";
             HttpResponseMessage response = client.PostAsync(url, content).Result;
 
-            if(response.IsSuccessStatusCode)
+            if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("List");
             }
@@ -167,5 +170,9 @@ namespace Sports_Merchandise_Store.Controllers
             }
         }
 
+        public ActionResult Error()
+        {
+            return View();
+        }
     }
 }

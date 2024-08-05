@@ -1,0 +1,36 @@
+﻿@model Sports_Merchandise_Store.Models.PlayerDTO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update @Model.PlayerName</h2>
+<nav>
+    <ul>
+        <li><a href="/Player/List">Cancel</a></li>
+        <li><a style="color: red" href="/Player/DeleteConfirm/@Model.PlayerId">Delete</a></li>
+    </ul>
+</nav>
+<form action="/Player/Update/@Model.PlayerId" method="POST">
+    <input type="hidden" name="PlayerId" value="@Model.PlayerId" />
+    <div>
+        <label>Player Name</label>
+        <input type="text" name="PlayerName" value="@Model.PlayerName" />
+    </div>
+    <div>
+        <label>Position</label>
+        <input type="text" name="PlayerPosition" value="@Model.PlayerPosition" />
+    </div>
+    <div>
+        <label>Shirt Number</label>
+        <input type="number" name="ShirtNumber" value="@Model.ShirtNumber" />
+    </div>
+    <div>
+        <label>Current Club</label>
+        @Html.DropDownListFor(t => t.PlayerTeamId, (SelectList)ViewBag.Teams, Model.TeamName)
+    </div>
+    <div>
+        <button type="submit">Update Player</button>
+    </div>
+</form>
+
