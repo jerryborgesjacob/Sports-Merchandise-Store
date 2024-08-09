@@ -26,11 +26,16 @@ namespace Sports_Merchandise_Store.Models
         {
         }
 
-        //C# and Database gateway for teams table
+        //C# and Database gateway for Soccer Teams table
         public DbSet<Team> Teams { get; set; }
 
-        //C# and Database gateway for players table
+        //C# and Database gateway for Players table
         public DbSet<Player> Players { get; set; }
+
+        //C# and Database gateway for Formula 1 teams table
+        public DbSet<F1_Team> F1_Teams { get; set; }
+        //C# and Database gateway for Drivers table
+        public DbSet<Driver> Drivers { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -195,8 +195,18 @@
     <Compile Include="Migrations\202407280428418_team-and-players-table.designer.cs">
       <DependentUpon>202407280428418_team-and-players-table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408091601443_F1-Teams.cs" />
+    <Compile Include="Migrations\202408091601443_F1-Teams.designer.cs">
+      <DependentUpon>202408091601443_F1-Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408091604403_Drivers-Table.cs" />
+    <Compile Include="Migrations\202408091604403_Drivers-Table.designer.cs">
+      <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\F1_Team.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -323,6 +333,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407280428418_team-and-players-table.resx">
       <DependentUpon>202407280428418_team-and-players-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408091601443_F1-Teams.resx">
+      <DependentUpon>202408091601443_F1-Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408091604403_Drivers-Table.resx">
+      <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -114,3 +114,5 @@ C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\ob
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.pdb
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.teamandplayerstable.resources
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.csproj.GenerateResource.cache
+C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.F1Teams.resources
+C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.DriversTable.resources
