@@ -5,12 +5,14 @@
 - Football Teams table
 - Football Players table
 - Football Teams CRUD
-- Players READ functionality
+- Football Players CRUD
+- Football Merch Controllers
 
 ## To be added(MVP):
 - Formula drivers
 - Formula Teams
 - CRUD for Formula
+- Football Merch Views
 
 ## To be added (Final)
 - User authorizations
