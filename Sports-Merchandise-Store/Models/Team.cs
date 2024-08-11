@@ -20,6 +20,8 @@ namespace Sports_Merchandise_Store.Models
 
         //A team can hold multiple players
         public ICollection<Player> Players { get; set; }
+
+        public virtual ICollection<SoccerMerchandise> SoccerMerch { get; set; }
     }
 
     //DTO section

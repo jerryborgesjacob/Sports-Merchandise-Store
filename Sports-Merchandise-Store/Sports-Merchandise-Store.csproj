@@ -186,6 +186,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\PlayerDataController.cs" />
+    <Compile Include="Controllers\SoccerMerchandiseController.cs" />
+    <Compile Include="Controllers\SoccerMerchandiseDataController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TeamDataController.cs" />
     <Compile Include="Global.asax.cs">
@@ -203,11 +205,20 @@
     <Compile Include="Migrations\202408091604403_Drivers-Table.designer.cs">
       <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408110229544_SoccerMerch.cs" />
+    <Compile Include="Migrations\202408110229544_SoccerMerch.designer.cs">
+      <DependentUpon>202408110229544_SoccerMerch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408110232442_SoccerIdentityModel.cs" />
+    <Compile Include="Migrations\202408110232442_SoccerIdentityModel.designer.cs">
+      <DependentUpon>202408110232442_SoccerIdentityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\F1_Team.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\SoccerMerchandise.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -302,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\SoccerMerchandise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -339,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408091604403_Drivers-Table.resx">
       <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408110229544_SoccerMerch.resx">
+      <DependentUpon>202408110229544_SoccerMerch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408110232442_SoccerIdentityModel.resx">
+      <DependentUpon>202408110232442_SoccerIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

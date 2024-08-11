@@ -57,7 +57,7 @@ namespace Sports_Merchandise_Store.Controllers
         /// A list of the specified id player.
         /// </returns>
         /// <example>
-        /// GET: api/PlayerData/1 --> (PLayerId, PlayerName, PlayerPosition, ShirtNumber, PlayerTeamId = TeamName) --> (1, Cole Palmer, RW, 20, Chelsea) 
+        /// GET: api/PlayerData/FindPlayer/1 --> (PLayerId, PlayerName, PlayerPosition, ShirtNumber, PlayerTeamId = TeamName) --> (1, Cole Palmer, RW, 20, Chelsea) 
         /// </example>
         [HttpGet]
         [ResponseType(typeof(PlayerDTO))]

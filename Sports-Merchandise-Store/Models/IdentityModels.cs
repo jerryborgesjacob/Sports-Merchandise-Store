@@ -36,6 +36,8 @@ namespace Sports_Merchandise_Store.Models
         public DbSet<F1_Team> F1_Teams { get; set; }
         //C# and Database gateway for Drivers table
         public DbSet<Driver> Drivers { get; set; }
+        //C# and Database gateway for Soccer Merch table
+        public DbSet<SoccerMerchandise> SoccerMerch { get; set; }
 
         public static ApplicationDbContext Create()
         {

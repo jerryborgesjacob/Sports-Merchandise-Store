@@ -158,7 +158,14 @@ namespace Sports_Merchandise_Store.Controllers
             HttpResponseMessage response = client.PostAsync(url, content).Result;
 
             if(response.IsSuccessStatusCode)
-            {
+            {   
+                /*List<SoccerMerchandiseDTO> relatedMerch = response.Content.ReadAsAsync<List<SoccerMerchandiseDTO>>().Result;
+
+                foreach (var merch in relatedMerch)
+                {
+                    string deleteMerchUrl = "SoccerMerchandiseData/DeleteMerchandise/" + merch.TeamId;
+                    HttpResponseMessage deleteMerchandiseResponse = client.PostAsync(deleteMerchandiseUrl, new StringContent("")).Result;
+                }*/
                 return RedirectToAction("List");
             }
             else

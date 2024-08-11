@@ -23,6 +23,8 @@ namespace Sports_Merchandise_Store.Models
         //A player can only be playing for one team
         public int PlayerTeamId { get; set; }
         public virtual Team Team { get; set; }
+
+        public virtual ICollection<SoccerMerchandise> SoccerMerch {  get; set; }
     }
 
     //DTO section
