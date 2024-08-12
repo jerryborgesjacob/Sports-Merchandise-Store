@@ -12,4 +12,3 @@
 - Football Merch Views
 - User authorizations
 - Admin CRUD
-- Merchandise tables
