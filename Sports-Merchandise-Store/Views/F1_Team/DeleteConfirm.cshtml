@@ -1,0 +1,26 @@
+﻿@model Sports_Merchandise_Store.Models.F1_TeamDTO
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-austria.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="delete-page">
+    <h3>Are you sure you want to delete this Team?</h3>
+    <p>This action cannot be reversed.</p>
+
+    <h2>@Model.F1TeamName</h2>
+
+    <form action="/F1_Team/Delete/@Model.F1TeamId" method="POST">
+        <input type="submit" value="Confirm Delete" />
+
+    </form>
+    <a class="add-button" href="/F1_Team/List">Cancel</a>
+</div>
