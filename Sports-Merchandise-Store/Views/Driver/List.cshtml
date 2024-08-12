@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.Driver>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<style>
+    body {
+        background-image: url('https://www.kymillman.com/wp-content/uploads/f1/gallery/images/edab0291a.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="table-container">
+    <h2>Driver List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var driver in Model)
+            {
+
+
+                <tr>
+                    <td>@driver.FirstName</td>
+                    <td>@driver.LastName</td>
+                    <td><a href="/Driver/DeleteConfirm/@driver.DriverId">Delete </a> |  <a href="/Driver/Edit/@driver.DriverId">Edit</a></td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a class="add-button" href="/Driver/New" class="mt-4">Add Driver</a>
+</div>

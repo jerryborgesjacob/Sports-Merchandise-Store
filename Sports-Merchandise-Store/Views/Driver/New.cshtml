@@ -1,0 +1,33 @@
+﻿@model Sports_Merchandise_Store.Models.Driver
+
+@{
+    ViewBag.Title = "New";
+}
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-austria.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="delete-page">
+    <h2>Add Driver</h2>
+    <form action="/Driver/Create" method="POST">
+        <div>
+            <label>First Name:</label> <input type="text" name="FirstName" required />
+        </div>
+        <div>
+            <label>Last Name:</label> <input type="number" name="LastName" required />
+        </div>
+
+        <div>
+            <input type="submit" value="Add Driver" />
+        </div>
+    </form>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
