@@ -14,4 +14,12 @@ namespace Sports_Merchandise_Store.Models
         public string EngineSupplier { get; set; }
         public string Country { get; set; }
     }
+
+    public class F1_TeamDTO
+    {
+        public int F1TeamId { get; set; }
+        public string F1TeamName { get; set; }
+        public string EngineSupplier { get; set; }
+        public string Country { get; set; }
+    }
 }

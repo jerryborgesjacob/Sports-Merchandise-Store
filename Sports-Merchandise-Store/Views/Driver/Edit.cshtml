@@ -1,0 +1,41 @@
+﻿@model Sports_Merchandise_Store.Models.Driver
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-austria.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="delete-page">
+    <h2>Edit a Driver</h2>
+    <form action="/Driver/Update/@Model.DriverId" method="POST">
+        <div style="display:none;">
+            @* Pass through the Driver Id *@
+            <input type="text" name="DriverId" value="@Model.DriverId" />
+        </div>
+        <div>
+            <label>First Name:</label> <input type="text" name="FirstName" value="@Model.FirstName" />
+        </div>
+        <div>
+            <label>Last Name Points:</label> <input type="text" name="LastName" value="@Model.LastName" />
+        </div>
+
+
+        <div>
+            <input type="submit" value="Update Driver" />
+
+        </div>
+    </form>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

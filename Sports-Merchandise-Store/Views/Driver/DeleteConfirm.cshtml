@@ -1,0 +1,33 @@
+﻿@model Sports_Merchandise_Store.Models.Driver
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-austria.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="delete-page">
+
+    <h3>Are you sure you want to delete this Driver?</h3>
+    <p>This action cannot be reversed.</p>
+
+    <h2>@Model.FirstName @Model.LastName </h2>
+
+
+
+
+    <form action="/Driver/Delete/@Model.DriverId" method="POST">
+        <input type="submit" value="Confirm Delete" />
+
+    </form>
+
+    <a class="add-button" href="/Driver/List">Cancel</a>
+
+</div>

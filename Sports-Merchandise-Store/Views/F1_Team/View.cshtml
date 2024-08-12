@@ -1,0 +1,39 @@
+﻿@model Sports_Merchandise_Store.Models.F1_Team
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-austria.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<div class="delete-page">
+    <h2>Edit a Team</h2>
+    <form action="/F1_Team/Update/@Model.F1TeamId" method="POST">
+        <div style="display:none;">
+            @* Pass through the Team Id *@
+            <input type="text" name="TeamId" value="@Model.F1TeamId" />
+        </div>
+        <div>
+            <label>Team Name:</label> <input type="text" name="TeamName" value="@Model.F1TeamName" />
+        </div>
+        <div>
+            <label>Team Points:</label> <input type="text" name="TeamPoints" value="@Model.Country" />
+        </div>
+        <div>
+            <label>Engine Supplier:</label> <input type="text" name="EngineSupplier" value="@Model.EngineSupplier" />
+        </div>
+
+        <div>
+            <input type="submit" value="Update Team" />
+
+        </div>
+    </form>
+</div>

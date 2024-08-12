@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.F1_TeamDTO>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<style>
+    body {
+        background-image: url('https://github.com/jerryborgesjacob/HTTP5122/blob/main/f1-2.png?raw=true');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+
+<div class="table-container">
+    <h2>Teams List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Engine Supplier</th>
+                <th>Country</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var team in Model)
+            {
+
+
+                <tr>
+                    <td>@team.F1TeamName</td>
+                    <td>@team.EngineSupplier</td>
+                    <td>@team.Country</td>
+                    <td><a href="/Team/DeleteConfirm/@team.F1TeamId">Delete</a> | <a href="/Team/Edit/@team.F1TeamId">Edit</a></td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a class="add-button" href="/Team/New" class="mt-4">Add Team</a>
+</div>
