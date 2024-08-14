@@ -6,6 +6,8 @@
 - Football Players table, views and CRUD - Georgios
 - Football Merch Controllers - Georgios
 - Soccer Merchandise Table (Bridging table between Teams and Players) - Georgios
+ ### To be added
+  - Views for soccer merch
  
 ## Formula1 (MVP)
 - F1 Teams CRUD and Views - Jerry
@@ -15,6 +17,5 @@
   - Issues with Views, unable to open views, keeps running into errors.
 
 ## To be added (Final)
-- Football Merch Views
 - User authorizations
 - Admin CRUD
