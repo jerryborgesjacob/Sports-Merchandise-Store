@@ -36,16 +36,16 @@ namespace Sports_Merchandise_Store.Controllers
         //[Authorize]
         public ActionResult Details(int id)
         {
-            DetailsSoccerMerchandise ViewModel = new DetailsSoccerMerchandise();
+            //DetailsSoccerMerchandise ViewModel = new DetailsSoccerMerchandise();
             string url = "SoccerMerchandiseData/FindSoccerMerchandise/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             SoccerMerchandiseDTO SelectedSoccerMerchandise = response.Content.ReadAsAsync<SoccerMerchandiseDTO>().Result;
             
 
-            ViewModel.SelectedSoccerMerchandise = SelectedSoccerMerchandise;
+            //ViewModel.SelectedSoccerMerchandise = SelectedSoccerMerchandise;
 
-            return View(ViewModel);
+            return View(); //viewmodel
         }
 
         // GET: SoccerMerchandise/New

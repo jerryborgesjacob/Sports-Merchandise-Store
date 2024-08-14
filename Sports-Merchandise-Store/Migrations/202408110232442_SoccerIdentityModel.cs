@@ -21,8 +21,8 @@
                         PlayerId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ItemId)
-                .ForeignKey("dbo.Players", t => t.PlayerId, cascadeDelete: true)
-                .ForeignKey("dbo.Teams", t => t.Teamid, cascadeDelete: true)
+                .ForeignKey("dbo.Players", t => t.PlayerId, cascadeDelete: false)
+                .ForeignKey("dbo.Teams", t => t.Teamid, cascadeDelete: false)
                 .Index(t => t.Teamid)
                 .Index(t => t.PlayerId);
             

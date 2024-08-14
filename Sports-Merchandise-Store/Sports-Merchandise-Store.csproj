@@ -205,10 +205,6 @@
     <Compile Include="Migrations\202408091604403_Drivers-Table.designer.cs">
       <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202408110229544_SoccerMerch.cs" />
-    <Compile Include="Migrations\202408110229544_SoccerMerch.designer.cs">
-      <DependentUpon>202408110229544_SoccerMerch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202408110232442_SoccerIdentityModel.cs" />
     <Compile Include="Migrations\202408110232442_SoccerIdentityModel.designer.cs">
       <DependentUpon>202408110232442_SoccerIdentityModel.cs</DependentUpon>
@@ -351,9 +347,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408091604403_Drivers-Table.resx">
       <DependentUpon>202408091604403_Drivers-Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202408110229544_SoccerMerch.resx">
-      <DependentUpon>202408110229544_SoccerMerch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408110232442_SoccerIdentityModel.resx">
       <DependentUpon>202408110232442_SoccerIdentityModel.cs</DependentUpon>

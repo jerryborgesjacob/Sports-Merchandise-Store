@@ -34,7 +34,7 @@ namespace Sports_Merchandise_Store.Controllers
         {
             List<SoccerMerchandise> SoccerMerch = db.SoccerMerch.ToList();
             List<SoccerMerchandiseDTO> SoccerMerchDTOs = new List<SoccerMerchandiseDTO>();
-            SoccerMerch.ForEach(m => SoccerMerchDTOs.Add(new SoccerMerch
+            SoccerMerch.ForEach(m => SoccerMerchDTOs.Add(new SoccerMerchandiseDTO
             {
                 ItemId = m.ItemId,
                 ItemName = m.ItemName,
@@ -42,8 +42,8 @@ namespace Sports_Merchandise_Store.Controllers
                 ItemSize = m.ItemSize,
                 Price = m.Price,
                 Quantity = m.Quantity,
-                TeamName = m.TeamName,
-                PlayerName = m.PlayerName
+                TeamName = m.Team.TeamName,
+                PlayerName = m.Player.PlayerName
             }));
             return Ok(SoccerMerchDTOs);
         }
@@ -64,7 +64,7 @@ namespace Sports_Merchandise_Store.Controllers
         public IHttpActionResult FindMerchandise(int id)
         {
 
-            SoccerMerchandise SoccerMerch = db.SoccerMerchs.Find(id);
+            SoccerMerchandise SoccerMerch = db.SoccerMerch.Find(id);
             SoccerMerchandiseDTO SoccerMerchandiseDTO = new SoccerMerchandiseDTO()
             {
                 ItemId = SoccerMerch.ItemId,
@@ -191,8 +191,8 @@ namespace Sports_Merchandise_Store.Controllers
             {
                 return NotFound();
             }
-            // Removes the player and saves the changes.
-            db.Players.Remove(SoccerMerchandise);
+            
+            db.SoccerMerch.Remove(SoccerMerchandise);
             db.SaveChanges();
 
             return Ok();
