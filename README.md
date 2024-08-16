@@ -1,11 +1,12 @@
 # Sports-Merchandise-Store
 ## Creative Collaboration Project that combines data from Formula 1 and Football items for a Merchandise Store.
 ------------------------------
-## Soccer (MVP)
-- Football Teams table, views and CRUD - Georgios
-- Football Players table, views and CRUD - Georgios
-- Football Merch Controllers - Georgios
-- Soccer Merchandise Table (Bridging table between Teams and Players) - Georgios
+## Soccer (Final) - Georgios
+- Football Teams table, views and CRUD
+- Football Players table, views and CRUD
+- Football Merch Controllers
+- Soccer Merchandise Table (Bridging table between Teams and Players)
+- Image Upload API controller and Views for Teams
  ### To be added
   - Views for soccer merch
  
