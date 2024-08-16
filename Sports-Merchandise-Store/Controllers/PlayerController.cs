@@ -34,7 +34,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // Get a specified player from the API and pass it to the view.
-        //[Authorize]
+        [Authorize]
         public ActionResult Details(int id)
         {
             DetailsPlayer ViewModel = new DetailsPlayer();
@@ -51,7 +51,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Player/New
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult New()
         {
             // Fetch the team list to make it available for selection
@@ -65,7 +65,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Player/Create
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(Player player)
         {
             string url = "PlayerData/AddPlayer";
@@ -95,7 +95,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Player/Edit/2
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             string url = "PlayerData/FindPlayer/" + id;
@@ -115,7 +115,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Player/Update/2
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, Player player)
         {
             string url = "PlayerData/UpdatePlayer/" + id;
@@ -138,7 +138,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         //GET: Player/Delete/2
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
 
         public ActionResult DeleteConfirm(int id)
         {
@@ -152,7 +152,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Player/Delete/2
         //[HttpPost]
-        //[Authorize(Users = "Admin")]
+        [Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "PlayerData/DeletePlayer/" + id;

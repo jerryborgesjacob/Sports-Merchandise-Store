@@ -38,7 +38,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // Get a specified team from the API and pass it to the view.
-        //[Authorize]
+        [Authorize]
          public ActionResult Details(int id)
         {
             DetailsTeam ViewModel = new DetailsTeam();
@@ -62,7 +62,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/New
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult New()
         {
             return View();
@@ -100,7 +100,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/Edit/2
-        //[Authorize(Roles = "Admin")]
+       [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             string url = "TeamData/FindTeam/" + id;
@@ -112,7 +112,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Team/Update/5
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, Team team)
         {
             string url = "TeamData/UpdateTeam/" + id;
@@ -135,7 +135,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         //GET: Team/Delete/2
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
        
         public ActionResult DeleteConfirm(int id)
         {
@@ -149,7 +149,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Team/Delete/2
         //[HttpPost]
-        //[Authorize(Users = "Admin")]
+        [Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "TeamData/DeleteTeam/" + id;

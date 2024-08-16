@@ -183,7 +183,6 @@ namespace Sports_Merchandise_Store.Controllers
         [ResponseType(typeof(Team))]
         [HttpPost]
         [Route("api/TeamData/DeleteTeam/{id}")]
-        //[Authorize(Roles = "Admin")] // Allow only admins to delete a team.
         public IHttpActionResult DeleteTeam(int id)
         {   
             // Finds the team with the provided id in the database
