@@ -17,6 +17,8 @@ namespace Sports_Merchandise_Store.Models
         public string League { get; set; }
         public string TeamCountry { get; set; }
         public decimal TeamBudget { get; set; }
+        // image
+        public string TeamImageUrl { get; set; }
 
         //A team can hold multiple players
         public ICollection<Player> Players { get; set; }
@@ -32,5 +34,7 @@ namespace Sports_Merchandise_Store.Models
         public string League { get; set; }
         public string TeamCountry { get; set; }
         public decimal TeamBudget { get; set; }
+        public string TeamImageUrl { get; set; }
+
     }
 }

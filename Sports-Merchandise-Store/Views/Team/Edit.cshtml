@@ -30,6 +30,16 @@
         <input type="number" name="TeamBudget" value="@Model.TeamBudget" />
     </div>
     <div>
+        <label>Club Image</label>
+        <imput type="text" name="TeamImageUrl" value="@Model.TeamImageUrl" placeholder="Enter Image URL"/>
+    </div>
+    <div>
+        @if (!string.IsNullOrEmpty(Model.TeamImageUrl))
+            {
+                <img src="@Model.TeamImageUrl" alt="Club Image" style="max-width: 200px; max-height=200px;" />
+            }
+    </div>
+    <div>
         <button type="submit">Update Club</button>
     </div>
 </form>

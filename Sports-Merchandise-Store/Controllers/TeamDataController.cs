@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -202,6 +203,36 @@ namespace Sports_Merchandise_Store.Controllers
         private bool TeamExists(int id)
         {
             return db.Teams.Count(t => t.TeamId == id) > 0;
+        }
+
+        //upload image
+        [HttpPost]
+        [Route("api/TeamData/UploadImage")]
+        public IHttpActionResult UploadImage(int id)
+        {
+            if (!Request.Content.IsMimeMultipartContent)
+            {
+                return BadRequest("Unsupported file");
+            }
+            var provider = MultipartFormDataStreamProvider(HttpContext.Current.Server.MapPath("~/App_Data"));
+            var result = Request.Content.ReadAsMultipartAsync(provider).Result;
+
+            var file = result.FileData.FirstOfDefault();
+            if(file == null)
+            {
+                return BadRequest("No file uploaded.");
+            }
+
+            var filepath = file.LocalFileName;
+            var filename = Path.GetFileName(filepath);
+            var imageUrl = $"/Uploads/{filename}";
+
+            return Ok(new { ImageUrl = imageUrl });
+        }
+
+        private object MultipartFormDataStreamProvider(object value)
+        {
+            throw new NotImplementedException();
         }
     }
 }
