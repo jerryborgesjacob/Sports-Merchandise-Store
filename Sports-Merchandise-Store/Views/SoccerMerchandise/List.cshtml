@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.SoccerMerchandiseDTO>
+@{
+    ViewBag.title = "List";
+}
+
+<h2>Current Soccer Merch List</h2>
+<a href="/SoccerMerchandise/New">Add new Item</a>
+@foreach (var SoccerMerchandise in Model)
+{
+    <h3><a href="/SoccerMerchandise/Details/@SoccerMerchandise.ItemId">@SoccerMerchandise.ItemName</a></h3>
+    <div>Price: @SoccerMerchandise.Price</div>
+}
+

@@ -218,6 +218,7 @@
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ViewModels\DetailsSoccerMerchandise.cs" />
     <Compile Include="Models\ViewModels\DetailsPlayer.cs" />
     <Compile Include="Models\ViewModels\DetailsTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -306,10 +307,15 @@
     <Content Include="Views\Player\Error.cshtml" />
     <Content Include="Views\Player\Edit.cshtml" />
     <Content Include="Views\Player\DeleteConfirm.cshtml" />
+    <Content Include="Views\SoccerMerchandise\DeleteConfirm.cshtml" />
+    <Content Include="Views\SoccerMerchandise\Details.cshtml" />
+    <Content Include="Views\SoccerMerchandise\Edit.cshtml" />
+    <Content Include="Views\SoccerMerchandise\Error.cshtml" />
+    <Content Include="Views\SoccerMerchandise\List.cshtml" />
+    <Content Include="Views\SoccerMerchandise\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SoccerMerchandise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

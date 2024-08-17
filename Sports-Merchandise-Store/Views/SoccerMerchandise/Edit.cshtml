@@ -1,0 +1,32 @@
+﻿@model Sports_Merchandise_Store.Models.SoccerMerchandiseDTO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update @Model.ItemName</h2>
+<nav>
+    <ul>
+        <li><a href="/SoccerMerchandise/List">Cancel</a></li>
+        <li><a style="color: red" href="/SoccerMerchandise/DeleteConfirm/@Model.TeamId">Delete</a></li>
+    </ul>
+</nav>
+<form action="/SoccerMerchandise/Update/@Model.ItemId" method="POST">
+    <input type="hidden" name="ItemId" value="@Model.ItemId" />
+    <div>
+        <label>Item Name</label>
+        <input type="text" name="ItemName" value="@Model.ItemName" />
+    </div>
+    <div>
+        <label>Item Type</label>
+        <input type="text" name="ItemType" value="@Model.ItemType" />
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="number" name="Price" value="@Model.Price" />
+    </div>
+    <div>
+        <button type="submit">Update Club</button>
+    </div>
+</form>
+

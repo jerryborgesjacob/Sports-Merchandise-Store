@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<div><a href="/SoccerMerchandise/List">Cancel</a></div>
+
+<h2>Create New Item</h2>
+<form action="/SoccerMerchandise/Create" method="POST">
+    <div>
+        <label>Item Name</label>
+        <input type="text" name="ItemName" />
+    </div>
+    <div>
+        <label>Item Type</label>
+        <input type="text" name="ItemType" />
+    </div>
+    <div>
+        <label>Item Size</label>
+        <input type="text" name="ItemSize" />
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="number" name="Price" />
+    </div>
+    <div>
+        <label>Quantity</label>
+        <input type="number" name="Quantity" />
+    </div>
+    <div>
+        <label>Team</label>
+        <input type="text" name="TeamName" />
+    </div>
+    <div>
+        <label>Player</label>
+        <input type="text" name="PlayerName" />
+    </div>
+    <div>
+        <button type="submit">Add Item</button>
+    </div>
+</form>
+
