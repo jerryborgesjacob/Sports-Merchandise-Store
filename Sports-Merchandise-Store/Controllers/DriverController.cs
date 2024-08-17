@@ -22,6 +22,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Driver
+        [Authorize(Roles = "Admin,User")]
         public ActionResult List()
         {
             //objective: communicate with our Driver data API to retrieve a list of Drivers
@@ -35,6 +36,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Driver/Details/5
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Details(int id)
         {
             return View();
@@ -51,6 +53,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // GET: Driver/Create
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(Driver driver)
         {
             //objective: Add a new Driver into the Database using the API
@@ -91,6 +94,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Driver/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             //the existing driver information
@@ -103,6 +107,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Driver/Edit/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, DriverDTO driver)
         {
             string url = "DriverData/UpdateDriver/" + id;
@@ -122,6 +127,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Driver/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirm(int id)
         {
             string url = "DriverData/GetDriver/" + id;
@@ -132,6 +138,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Driver/Delete/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "DriverData/DeleteDriver/" + id;
