@@ -30,6 +30,16 @@
         <div>
             <label>Engine Supplier:</label> <input type="text" name="EngineSupplier" value="@Model.EngineSupplier" />
         </div>
+        <div>
+            <label>F1 Team Image</label>
+            <input type="text" name="F1_TeamImageUrl" value="@Model.F1_TeamImageUrl" placeholder="Enter Image URL"/>
+        </div>
+        <div>
+            @if (!string.IsNullOrEmpty(Model.F1_TeamImageUrl))
+            {
+                <img src="@Model.F1_TeamImageUrl" alt="Formula 1 Team Image" style="max-width: 200px; max-height=200px;" />
+            }
+        </div>
 
         <div>
             <input type="submit" value="Update Team" />
