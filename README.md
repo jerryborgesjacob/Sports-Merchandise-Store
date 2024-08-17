@@ -9,13 +9,9 @@
 - Image Upload for Teams
 - Views for soccer merch
  
-## Formula1 (MVP)
+## Formula1 (Final)
 - F1 Teams CRUD and Views - Jerry
 - F1 Drivers CRUD and Views - Jerry
-
-### Issues
-  - Issues with Views, unable to open views, keeps running into errors.
-
-## To be added (Final)
-- User authorizations
-- Admin CRUD
+- Image Upload for Teams
+- Admin Authorization for Teams, Drivers, F1_Teams, and Merchandise Controllers
+  
