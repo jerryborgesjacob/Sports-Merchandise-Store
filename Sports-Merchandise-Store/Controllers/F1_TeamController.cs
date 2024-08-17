@@ -35,6 +35,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: F1_Team/Details/5
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Details(int id)
         {
             return View();
@@ -42,6 +43,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: F1_Team/Create
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(F1_TeamDTO F1team)
         {
             string url = "TeamData/AddF1Team";
@@ -65,6 +67,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: F1_Team/Create
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -80,6 +83,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: F1_Team/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             //the existing team information
@@ -92,6 +96,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: F1_Team/Edit/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, F1_TeamDTO team)
         {
             string url = "TeamData/UpdateF1Team/" + id;
@@ -121,6 +126,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: F1_Team/Delete/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "TeamData/DeleteF1Team/" + id;
@@ -140,6 +146,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         //upload image for F1 TEAMS
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("api/F1_TeamData/UploadImage")]
         public IHttpActionResult UploadImage(int id)
         {
