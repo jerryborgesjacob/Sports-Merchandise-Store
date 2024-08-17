@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Sports_Merchandise_Store.Models.F1MerchandiseDTO>
+@{
+    ViewBag.title = "List";
+}
+
+<h2>F1 Merchandise</h2>
+<a href="/F1Merchandise/New">Add new Item</a>
+@foreach (var F1Merchandise in Model)
+{
+    <h3><a href="/F1Merchandise/Details/@F1Merchandise.ItemId">@F1Merchandise.ItemName</a></h3>
+    <div>Price: @F1Merchandise.Price</div>
+}
+

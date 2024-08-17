@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\controllers\\teamdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:controllers\\teamdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\soccermerchandise\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\soccermerchandise\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\f1merchandise\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\f1merchandise\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\views\\soccermerchandise\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:views\\soccermerchandise\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\controllers\\f1merchandisedatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:controllers\\f1merchandisedatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|c:\\users\\borges\\source\\repos\\sports-merchandise-store-main\\sports-merchandise-store\\controllers\\soccermerchandisedatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1DEA89-B190-446F-8968-AC7A522AC924}|Sports-Merchandise-Store.csproj|solutionrelative:controllers\\soccermerchandisedatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +46,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\New.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\New.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\New.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\New.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:25:53.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Error.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:23:27.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Edit.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:23:12.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\Details.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:22:56.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeleteConfirm.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\DeleteConfirm.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\DeleteConfirm.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\DeleteConfirm.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\DeleteConfirm.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:22:18.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\Source\\Repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\List.cshtml",
+              "RelativeDocumentMoniker": "Views\\F1Merchandise\\List.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\Source\\Repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\F1Merchandise\\List.cshtml",
+              "RelativeToolTip": "Views\\F1Merchandise\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:19:30.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeleteConfirm.cshtml",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\SoccerMerchandise\\DeleteConfirm.cshtml",
+              "RelativeDocumentMoniker": "Views\\SoccerMerchandise\\DeleteConfirm.cshtml",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\SoccerMerchandise\\DeleteConfirm.cshtml",
+              "RelativeToolTip": "Views\\SoccerMerchandise\\DeleteConfirm.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T17:18:56.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "F1MerchandiseDataController.cs",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\F1MerchandiseDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\F1MerchandiseDataController.cs",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\F1MerchandiseDataController.cs",
+              "RelativeToolTip": "Controllers\\F1MerchandiseDataController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAI8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T16:27:42.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SoccerMerchandiseDataController.cs",
+              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\SoccerMerchandiseDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SoccerMerchandiseDataController.cs",
+              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\SoccerMerchandiseDataController.cs",
+              "RelativeToolTip": "Controllers\\SoccerMerchandiseDataController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T16:27:08.083Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -35,45 +176,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Startup.Auth.cs",
-              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\App_Start\\Startup.Auth.cs",
-              "RelativeDocumentMoniker": "App_Start\\Startup.Auth.cs",
-              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\App_Start\\Startup.Auth.cs",
-              "RelativeToolTip": "App_Start\\Startup.Auth.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T11:09:51.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TeamDataController.cs",
-              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\TeamDataController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TeamDataController.cs",
-              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Controllers\\TeamDataController.cs",
-              "RelativeToolTip": "Controllers\\TeamDataController.cs",
-              "ViewState": "AQIAAM0AAAAAAAAAAAAMwNgAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T11:05:53.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\SoccerMerchandise\\List.cshtml",
-              "RelativeDocumentMoniker": "Views\\SoccerMerchandise\\List.cshtml",
-              "ToolTip": "C:\\Users\\Borges\\source\\repos\\Sports-Merchandise-Store-main\\Sports-Merchandise-Store\\Views\\SoccerMerchandise\\List.cshtml",
-              "RelativeToolTip": "Views\\SoccerMerchandise\\List.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-17T11:03:57.3Z",
-              "EditorCaption": ""
             }
           ]
         }

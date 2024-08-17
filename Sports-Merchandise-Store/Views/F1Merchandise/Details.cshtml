@@ -1,0 +1,23 @@
+﻿@model Sports_Merchandise_Store.Models.ViewModels.F1MerchandiseDetails
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>@Model.SelectedF1Item.ItemName</h2>
+<nav>
+    <ul>
+        <li><a href="/F1Merchandise/List">Go Back to Team List</a></li>
+        <li><a href="/F1Merchandise/Edit/@Model.SelectedF1Item.ItemId">Update</a></li>
+        <li><a style="color:#BA1F33" href="/F1Merchandise/DeleteConfirm/@Model.SelectedF1Item.ItemId">Delete</a></li>
+    </ul>
+</nav>
+<div>
+    <div>
+        <p style="font-weight: bold;">@Model.SelectedF1Item.ItemName</p>
+        <p>Price: @Model.SelectedF1Item.Price</p>
+        <p>Team: @Model.SelectedF1Item.F1TeamName</p>
+        <p>Driver:@Model.SelectedF1Item.LastName + " " +@Model.SelectedF1Item.LastName</p>
+    </div>
+</div>
+
