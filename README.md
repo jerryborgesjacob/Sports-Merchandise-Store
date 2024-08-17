@@ -6,7 +6,7 @@
 - Football Players table, views and CRUD
 - Football Merch Controllers
 - Soccer Merchandise Table (Bridging table between Teams and Players)
-- Image Upload API controller and Views for Teams
+- Image Upload
  ### To be added
   - Views for soccer merch
  
