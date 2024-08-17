@@ -8,9 +8,10 @@
 - Soccer Merchandise Table (Bridging table between Teams and Players)
 - Image Upload for Teams
  
-## Formula1 (Final)
-- F1 Teams CRUD and Views - Jerry
-- F1 Drivers CRUD and Views - Jerry
-- Image Upload for Teams
+## Formula1 (Final) - Jerry Borges Jacob
+- F1 Teams CRUD and Views 
+- F1 Drivers CRUD and Views
+- F1 Merchandise CRUD and Views
+- Image Upload
 - Admin Authorization for Teams, Drivers, F1_Teams, and Merchandise Controllers
   
