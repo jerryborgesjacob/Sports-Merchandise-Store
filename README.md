@@ -4,11 +4,10 @@
 ## Soccer (Final) - Georgios
 - Football Teams table, views and CRUD
 - Football Players table, views and CRUD
-- Football Merch Controllers
+- Football Merch table, views and CRUD
 - Soccer Merchandise Table (Bridging table between Teams and Players)
-- Image Upload
- ### To be added
-  - Views for soccer merch
+- Image Upload for Teams
+- Views for soccer merch
  
 ## Formula1 (MVP)
 - F1 Teams CRUD and Views - Jerry
