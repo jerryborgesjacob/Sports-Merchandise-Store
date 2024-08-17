@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Web;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
@@ -209,7 +210,7 @@ namespace Sports_Merchandise_Store.Controllers
         [Route("api/TeamData/UploadImage")]
         public IHttpActionResult UploadImage(int id)
         {
-            if (!Request.Content.IsMimeMultipartContent)
+            if (!Request.Content.IsMimeMultipartContent())
             {
                 return BadRequest("Unsupported file");
             }

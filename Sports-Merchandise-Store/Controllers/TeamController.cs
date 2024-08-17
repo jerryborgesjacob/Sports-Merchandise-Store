@@ -25,7 +25,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: Team/List
-        //[Authorize] Commented out until admin and user authorization is created
+         [Authorize(Roles = "Admin,User")]
         
         public ActionResult List()
         {
@@ -38,8 +38,8 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // Get a specified team from the API and pass it to the view.
-        [Authorize]
-         public ActionResult Details(int id)
+        [Authorize(Roles = "Admin")]
+        public ActionResult Details(int id)
         {
             DetailsTeam ViewModel = new DetailsTeam();
             string url = "TeamData/FindTeam/" + id;
@@ -70,7 +70,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: Team/Create
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(Team team)
         {
             string url = "TeamData/AddTeam";

@@ -117,3 +117,12 @@ C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\ob
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.F1Teams.resources
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.DriversTable.resources
 C:\Users\georg\source\repos\Sports-Merchandise-Store\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.SoccerIdentityModel.resources
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.csproj.AssemblyReference.cache
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.teamandplayerstable.resources
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.F1Teams.resources
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.DriversTable.resources
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports_Merchandise_Store.Migrations.SoccerIdentityModel.resources
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.csproj.GenerateResource.cache
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.csproj.CoreCompileInputs.cache
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.dll
+C:\Users\Borges\Source\Repos\Sports-Merchandise-Store-main\Sports-Merchandise-Store\obj\Debug\Sports-Merchandise-Store.pdb

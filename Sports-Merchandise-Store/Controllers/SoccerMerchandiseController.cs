@@ -33,7 +33,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // Get specified soccer merch from the API and pass it to the view.
-        //[Authorize]
+        [Authorize]
         public ActionResult Details(int id)
         {
             //DetailsSoccerMerchandise ViewModel = new DetailsSoccerMerchandise();
@@ -49,7 +49,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: SoccerMerchandise/New
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult New()
         {
             
@@ -58,7 +58,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: SoccerMerchandise/Create
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(SoccerMerchandise SoccerMerchandise)
         {
             string url = "SoccerMerchandiseData/AddSoccerMerchandise";
@@ -82,7 +82,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         // GET: SoccerMerchandise/Edit/2
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             string url = "SoccerMerchandiseData/FindSoccerMerchandise/" + id;
@@ -93,7 +93,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: SoccerMerchandise/Update/2
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Update(int id, SoccerMerchandise SoccerMerchandise)
         {
             string url = "SoccerMerchandiseData/UpdateSoccerMerchandise/" + id;
@@ -114,7 +114,7 @@ namespace Sports_Merchandise_Store.Controllers
         }
 
         //GET: SoccerMerchandise/Delete/2
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
 
         public ActionResult DeleteConfirm(int id)
         {
@@ -127,7 +127,7 @@ namespace Sports_Merchandise_Store.Controllers
 
         // POST: SoccerMerchandise/Delete/2
         //[HttpPost]
-        //[Authorize(Users = "Admin")]
+        [Authorize(Users = "Admin")]
         public ActionResult Delete(int id)
         {
             string url = "SoccerMerchandiseData/DeleteSoccerMerchandise/" + id;
