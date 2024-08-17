@@ -7,7 +7,6 @@
 - Football Merch table, views and CRUD
 - Soccer Merchandise Table (Bridging table between Teams and Players)
 - Image Upload for Teams
-- Views for soccer merch
  
 ## Formula1 (Final)
 - F1 Teams CRUD and Views - Jerry
